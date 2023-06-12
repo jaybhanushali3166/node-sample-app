@@ -3,7 +3,6 @@ const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const PORT = 80;
-const config = require("./db.config");
 
 // parse application/json
 app.use(bodyParser.json());
