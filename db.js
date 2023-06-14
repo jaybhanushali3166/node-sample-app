@@ -1,16 +1,6 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
-const fs = require("fs");
-
-const filePath = "./db.config.js";
-
-if (fs.existsSync(filePath)) {
-  console.log("File exists");
-} else {
-  console.log("File does not exist");
-}
-const config = require("./db.config.js");
-console.log("config", config, process.env);
-const uri = `mongodb+srv://${config.DB_USER}:${config.DB_PWD}@cluster0.pftwneu.mongodb.net/`;
+require("dotenv").config();
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@cluster0.pftwneu.mongodb.net/`;
 
 // Function to establish MongoDB connection
 async function connectDB() {
