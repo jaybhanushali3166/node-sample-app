@@ -1,6 +1,6 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const config = require("./db.config");
-
+console.log("config", config, process.env);
 const uri = `mongodb+srv://${config.DB_USER}:${config.DB_PWD}@cluster0.pftwneu.mongodb.net/`;
 
 // Function to establish MongoDB connection
