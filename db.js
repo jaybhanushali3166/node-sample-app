@@ -8,7 +8,7 @@ if (fs.existsSync(filePath)) {
 } else {
   console.log("File does not exist");
 }
-const config = require("./db.config");
+const config = require("./db.config.js");
 console.log("config", config, process.env);
 const uri = `mongodb+srv://${config.DB_USER}:${config.DB_PWD}@cluster0.pftwneu.mongodb.net/`;
 
